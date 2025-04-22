@@ -5,8 +5,11 @@
         public App()
         {
             InitializeComponent();
+        }
 
-            MainPage = new ControlTemplateDemo();
+        protected override Window CreateWindow(IActivationState? activationState)
+        {
+            return new Window(new ControlTemplateDemo());
         }
     }
 }
